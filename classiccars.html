@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartleby Design | Classic Cars</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+    <header id="top" class="main-header">
+    <div id="logo">
+        <img src="img/BartlebyDesignOrange.png" width="40" height="40" alt="logo" style="float: left;">
+    </div>
+        <span class="navigation">
+            <a href="index.html">Home</a> - 
+            <a href="about.html">About</a> - 
+            <a href="comingsoon.html">Portfolio</a> - 
+            <a href="comingsoon.html">Services</a> - 
+            <a href="contact.html">Contact</a>
+        </span>
+    </header>
+    
+    <div class="header-section">
+        <h1>Iconic Cars</h1>
+    </div>
+
+    <div class="primary-content t-border">
+        <p>
+            Each image in this collection is designed to be a bold, powerful image on its own but can also
+            be combined with other images in the collection to create an eye catching display of classic cars
+            in high contrast colours.
+        </p>
+    </div>
+    
+
+<div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="img/Cars_Sprite.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="img/Cars_Kitten.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="img/Cars_Mazda3.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="img/Cars_MR2.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="img/Cars_Prelude.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="img/pmme.JPG" style="width:100%">
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/Cars_Sprite.png" style="width:100%" onclick="currentSlide(1)" alt="Austin-Healey Sprite">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/Cars_Kitten.png" style="width:100%" onclick="currentSlide(2)" alt="Relient Kitten">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/Cars_Mazda3.png" style="width:100%" onclick="currentSlide(3)" alt="Mazda 3">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/Cars_MR2.png" style="width:100%" onclick="currentSlide(4)" alt="Toyota MR2">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/Cars_Prelude.png" style="width:100%" onclick="currentSlide(5)" alt="Honda Prelude">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/pmme.JPG" style="width:100%" onclick="currentSlide(6)" alt="That's all folks!">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+    <footer id="main-footer">
+        <p>Copyright <a href="index.html">Bartleby Design</a> 2020.</p>
+        <a href="#top">Back to top &raquo;</a>
+    </footer>
+</body>
+</html>
